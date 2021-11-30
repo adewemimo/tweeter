@@ -15,7 +15,7 @@
     padding: 0;
     border: none;
     border-bottom: 3px solid gray;
-    color: #545149;
+    background-color: #f4f1ec;
     resize: none;
 }
 
@@ -26,17 +26,14 @@
 
 }
 
-.submit {
+.submit-tweet button {
     float: left;
-}
-
-.submit button {
     color: #fff;
     background-color: #4056A1;
     border: 0;
     padding: 3px;
 }
 
-.output {
+.submit-tweet output {
     float: right;
 }

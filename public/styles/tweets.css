@@ -1,0 +1,80 @@
+.tweets-container {
+    border: 3px solid gray;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.tweets-container:hover {
+    box-shadow: 5px 5px 2px 1px #7384c0;
+
+}
+.tweets-container article {
+    margin: 0.5em;
+}
+
+.tweets-container header {
+    border: none;
+    border-bottom: 3px solid gray;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.header-title {
+    padding-bottom: 2em;
+}
+
+.header-body {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.header-title img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 0.5em;
+}
+
+.header-title-left{
+    float: left;
+    margin:auto;
+    padding-top: 0.3em;
+}
+.header-title-right {
+    float: right;
+    opacity: 0.5;
+    margin: auto;
+    padding-top: 0.3em;
+}
+
+.header-title-right:hover {
+    opacity: 1;
+}
+
+.tweets-container footer{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 0.5em;
+}
+.tweets-container footer 
+
+.icons-container {
+    margin-left: auto;
+    color: #4056A1;
+}
+
+.icons-container span {
+    color: black;
+}
+
+.fa-flag:hover {
+    color: darkgoldenrod;
+}
+
+.fa-retweet:hover {
+    color: darkgoldenrod;
+}
+
+.fa-heart:hover {
+    color: darkgoldenrod;
+}

@@ -5,70 +5,114 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:wght@400;600&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:wght@400;600&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="nav-container">
-        <div class="nav-item-left">
-          <span class="title">tweeter</span>
+      <div class="nav-item-left">
+        <span class="title">tweeter</span>
+      </div>
+      <div class="nav-item-right">
+        <div class="nav-item-right-one">
+          <p><b>Write</b> a new tweet</p>
         </div>
-        <div class="nav-item-right">
-          <div class="nav-item-right-one">
-            <p><b>Write</b> a new tweet</p>
-          </div>
-          <div class="nav-item-right-two">
-            <i class="fas fa-angle-double-down"></i>
-          </div>
+        <div class="nav-item-right-two">
+          <i class="fas fa-angle-double-down"></i>
         </div>
+      </div>
     </nav>
     <header class="header-container">
       <div class="header-image">
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png" />
       </div>
-      <br>
+      <br />
       <div class="header-name">
-          <h2>Seun Soetan</h2>
+        <h2>Seun Soetan</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action='/tweets' method='post'>
+        <form action="/tweets" method="post">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" aria-label="What are you humming about"></textarea>
+          <textarea
+            name="text"
+            id="tweet-text"
+            aria-label="tweet text"
+          ></textarea>
           <div class="submit-tweet">
-            <div class="submit">
-              <button type="submit">Tweet</button>
-            </div>
-            <div class="output">
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <section class="tweets-container">
+        <article>
+          <header>
+            <div class="header-title">
+              <img src="https://i.imgur.com/73hZDYK.png" alt="avatar" />
+              <p class="header-title-left">Newton</p>
+              <p class="header-title-right">@SirIsaac</p>
+            </div>
+            <div class="header-body">
+              <p>
+                If I have seen further it is by standing on the on the shoulders
+                of giants
+              </p>
+            </div>
+          </header>
+          <footer>
+            <span id="timeAgo">1637901060215</span>
+            <div class="icons-container">
+              <i class="fas fa-flag fa-xs"></i>
+              <i class="fas fa-retweet fa-xs"></i>
+              <i class="fas fa-heart fa-xs"><span>'</span></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </body>
 </html>
