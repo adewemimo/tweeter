@@ -56,7 +56,10 @@
     padding-right: 0.5em;
     margin-top: 0.5em;
 }
-.tweets-container footer 
+.tweets-container footer {
+    font-size: small;
+    font-weight: bold;
+}
 
 .icons-container {
     margin-left: auto;
