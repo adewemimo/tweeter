@@ -1,39 +1,42 @@
 .new-tweet {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .new-tweet label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .new-tweet textarea {
-    width: 100%;
-    padding: 0;
-    border: none;
-    border-bottom: 3px solid gray;
-    background-color: #f4f1ec;
-    resize: none;
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-bottom: 3px solid gray;
+  background-color: #f4f1ec;
+  resize: none;
 }
 
 .submit-tweet {
-    width: 100%;
-    font-family: 'Bungee', cursive;
-    margin-top: 5px;
-
+  width: 100%;
+  font-family: 'Bungee', cursive;
+  margin-top: 5px;
 }
 
 .submit-tweet button {
-    float: left;
-    color: #fff;
-    background-color: #4056A1;
-    border: 0;
-    padding: 3px;
+  float: left;
+  color: #fff;
+  background-color: #4056a1;
+  border: 0;
+  padding: 3px;
 }
 
 .submit-tweet output {
-    float: right;
+  float: right;
+}
+
+.negative-count {
+  color: red;
 }

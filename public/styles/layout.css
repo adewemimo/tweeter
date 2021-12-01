@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,7 +24,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-
 }
 
 /*
@@ -31,6 +32,4 @@ body {
 .container {
   width: 90%;
   margin: auto;
-
- }
-
+}
