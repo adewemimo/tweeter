@@ -30,10 +30,6 @@ const data = [
 ];
 
 $(document).ready(function () {
-  //   const elem = document.getElementById('timeAgo');
-  //   elem.innerText = timeago.format(+elem.innerText);
-  renderTweets(data);
-
   //submit tweet form and prevent default behavior of submit
 $(function() {
   $("form").submit(function (event) {
@@ -45,6 +41,16 @@ $(function() {
     data: formData })
   });
 });
+
+//get tweets from server
+const loadTweets = () => {
+  $.get('/tweets', data => {
+    renderTweets(data);
+  });
+}
+
+loadTweets();
+
 });
 
 const createTweetElement = tweet => {
@@ -83,7 +89,6 @@ const renderTweets = tweets => {
     $('.container').append($tweet);
   });
 };
-
 
 
 
