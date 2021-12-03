@@ -41,3 +41,21 @@
 .negative-count {
   color: red;
 }
+
+/* Reference used: https://codeconvey.com/error-message-css-style-example/ */
+.tweet-error {
+  border: 3px solid red;
+  margin: 10px auto;
+  padding: 15px 20px 15px 10px;
+  width: 100%;
+  color: #d8000c;
+  display: none;
+  position: relative;
+}
+.tweet-error:before {
+  font-family: 'FontAwesome';
+  content: '\f071';
+  top: 15px;
+  font-size: 20px;
+  color: red;
+}

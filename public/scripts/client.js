@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
- // const data was used to test the app before getting data from the server
+// const data was used to test the app before getting data from the server
 const data = [
   {
     user: {
@@ -32,49 +32,52 @@ const data = [
 
 $(document).ready(function () {
   //submit tweet form and prevent default behavior of submit
-$(function() {
-  $("form").submit(function (event) {
-    event.preventDefault();
-    const tweetLength = $('#tweet-text').val().length;
-    if (tweetLength > 140) {
-      alert("Your tweet exceeds 140 characters");
-      return;
-    }
-    else if (tweetLength < 1) {
-      alert("Please enter a tweet");
-      return;
-    }
-    else {
-      const formData = $( "form" ).serialize();
-      $.ajax('/tweets', { 
-      method: 'POST',
-      data: formData })
-      .done(() => {
-        $.get('/tweets', (tweets) => {
-          const $newTweet = createTweetElement(tweets[tweets.length - 1]);
-          $('#render-new-tweet').prepend($newTweet);
+  $(function () {
+    $('form').submit(function (event) {
+      event.preventDefault();
+      const tweetLength = $('#tweet-text').val().length;
+      $('.tweet-error').slideUp();
+      if (tweetLength > 140) {
+        $('.tweet-error').text('Your tweet exceeds 140 characters');
+        $('.tweet-error').slideDown('slow');
+        //alert("Your tweet exceeds 140 characters");
+        return;
+      } else if (tweetLength < 1) {
+        $('.tweet-error').text('Please enter a tweet');
+        $('.tweet-error').slideDown('slow');
+        //alert("Please enter a tweet");
+        return;
+      } else {
+        const formData = $('form').serialize();
+        $.ajax('/tweets', {
+          method: 'POST',
+          data: formData,
+        }).done(() => {
+          $.get('/tweets', tweets => {
+            const $newTweet = createTweetElement(tweets[tweets.length - 1]);
+            $('#render-new-tweet').prepend($newTweet);
+          });
         });
-      })
-      $('#tweet-text').val('');
-    }
+        $('#tweet-text').val('');
+        $('.tweet-error').slideUp();
+      }
+    });
   });
-});
 
-//get tweets from server
-const loadTweets = () => {
-  $.get('/tweets', data => {
-    renderTweets(data);
-  });
-}
+  //get tweets from server
+  const loadTweets = () => {
+    $.get('/tweets', data => {
+      renderTweets(data);
+    });
+  };
 
-loadTweets();
-
+  loadTweets();
 });
 
 const createTweetElement = tweet => {
   // an escape function to prevent XSS attacks
   const escape = function (str) {
-    let div = document.createElement("div");
+    let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
@@ -115,6 +118,3 @@ const renderTweets = tweets => {
     $('.container').append($tweet);
   });
 };
-
-
-
