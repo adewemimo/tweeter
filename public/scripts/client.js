@@ -72,6 +72,14 @@ loadTweets();
 });
 
 const createTweetElement = tweet => {
+  // an escape function to prevent XSS attacks
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  // create a new tweet element
   let $tweetElement = $(`
     <section class="tweets-container">
         <article>
@@ -83,7 +91,7 @@ const createTweetElement = tweet => {
           </div>
           <div class="header-body">
             <p>
-            ${tweet.content.text}
+            ${escape(tweet.content.text)}
             </p>
           </div>
         </header>
