@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+ // const data was used to test the app before getting data from the server
 const data = [
   {
     user: {
@@ -34,11 +35,28 @@ $(document).ready(function () {
 $(function() {
   $("form").submit(function (event) {
     event.preventDefault();
-    const formData = $( "form" ).serialize();
-    console.log("formData",formData);
-    $.ajax('/tweets', { 
-    method: 'POST',
-    data: formData })
+    const tweetLength = $('#tweet-text').val().length;
+    if (tweetLength > 140) {
+      alert("Your tweet exceeds 140 characters");
+      return;
+    }
+    else if (tweetLength < 1) {
+      alert("Please enter a tweet");
+      return;
+    }
+    else {
+      const formData = $( "form" ).serialize();
+      $.ajax('/tweets', { 
+      method: 'POST',
+      data: formData })
+      .done(() => {
+        $.get('/tweets', (tweets) => {
+          const $newTweet = createTweetElement(tweets[tweets.length - 1]);
+          $('#render-new-tweet').prepend($newTweet);
+        });
+      })
+      $('#tweet-text').val('');
+    }
   });
 });
 
