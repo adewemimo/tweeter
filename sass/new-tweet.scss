@@ -1,3 +1,9 @@
+$body-background-color: #f4f1ec;
+$primary-color: white;
+$secondary-color: #4056a1;
+$tertiary-color: red;
+$border-color: gray;
+
 .new-tweet {
   width: 100%;
   display: flex;
@@ -15,21 +21,21 @@
   width: 100%;
   padding: 0;
   border: none;
-  border-bottom: 3px solid gray;
-  background-color: #f4f1ec;
+  border-bottom: 3px solid $border-color;
+  background-color: $body-background-color;
   resize: none;
 }
 
 .submit-tweet {
   width: 100%;
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
   margin-top: 5px;
 }
 
 .submit-tweet button {
   float: left;
-  color: white;
-  background-color: #4056a1;
+  color: $primary-color;
+  background-color: $secondary-color;
   border: 0;
   padding: 3px;
 }
@@ -39,24 +45,23 @@
 }
 
 .negative-count {
-  color: red;
+  color: $tertiary-color;
 }
 
 /* Reference used: https://codeconvey.com/error-message-css-style-example/ */
 .tweet-error {
-  border: 3px solid red;
+  border: 3px solid $tertiary-color;
   margin: 10px auto;
   padding: 15px 20px 15px 10px;
   width: 100%;
-  color: red;
+  color: $tertiary-color;
   display: none;
   position: relative;
 }
-
 .tweet-error:before {
-  font-family: "FontAwesome";
-  content: "\f071";
+  font-family: 'FontAwesome';
+  content: '\f071';
   top: 15px;
   font-size: 20px;
-  color: red;
+  color: $tertiary-color;
 }

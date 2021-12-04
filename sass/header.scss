@@ -1,10 +1,13 @@
+$primary-color: white;
+$header-bg-color: darkgoldenrod;
+
 .header-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/basketball.png");
-  background-color: darkgoldenrod;
+  background-image: url('../images/basketball.png');
+  background-color: $header-bg-color;
   padding-top: 4em;
   padding-bottom: 2em;
 }
@@ -16,5 +19,5 @@
 .header-name h2 {
   margin: 0;
   padding: 0;
-  color: white;
+  color: $primary-color;
 }

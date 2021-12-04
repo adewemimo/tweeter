@@ -1,24 +1,31 @@
+$body-background-color: #f4f1ec;
+$primary-color: white;
+$secondary-color: #4056a1;
+$tertiary-color: red;
+$border-color: gray;
+$shadow-color: #7384c0;
+$icon-bg-color: darkgoldenrod;
+$general-color: black;
+
+
 .tweets-container {
   border: 3px solid gray;
   margin-top: 2em;
   margin-bottom: 2em;
 }
-
 .tweets-container:hover {
-  box-shadow: 5px 5px 2px 1px #7384c0;
+  box-shadow: 5px 5px 2px 1px $shadow-color;
 }
-
 .tweets-container article {
   margin: 0.5em;
 }
 
 .tweets-container header {
   border: none;
-  border-bottom: 3px solid gray;
+  border-bottom: 3px solid $border-color;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-
 .header-title {
   padding-bottom: 2em;
 }
@@ -40,7 +47,6 @@
   margin: auto;
   padding-top: 0.3em;
 }
-
 .header-title-right {
   float: right;
   opacity: 0.5;
@@ -59,7 +65,6 @@
   padding-right: 0.5em;
   margin-top: 0.5em;
 }
-
 .tweets-container footer {
   font-size: small;
   font-weight: bold;
@@ -67,21 +72,21 @@
 
 .icons-container {
   margin-left: auto;
-  color: #4056a1;
+  color: $secondary-color;
 }
 
 .icons-container span {
-  color: black;
+  color: $general-color;
 }
 
 .fa-flag:hover {
-  color: darkgoldenrod;
+  color: $icon-bg-color;
 }
 
 .fa-retweet:hover {
-  color: darkgoldenrod;
+  color: $icon-bg-color;
 }
 
 .fa-heart:hover {
-  color: darkgoldenrod;
+  color: $icon-bg-color;
 }
