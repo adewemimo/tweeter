@@ -1,0 +1,23 @@
+@media (min-width: 1024px) {
+    body {
+      flex-direction: row;
+    }
+  
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-top: 10rem;
+    }
+  
+    .header-container {
+        width: 50%;
+        margin: 12rem auto 0;
+        height: 400px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .nav-container{
+      background: none !important;
+    }
+  
+  }
