@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple AJAX-based single-page Application - Twitter clone. This app uses JQuery, HTML, plain CSS and SASS as it's technology stack. 
+Tweeter is a simple AJAX-based single-page Application - Twitter clone. This app uses JQuery, HTML, plain CSS and SASS as it's technology stack.
 
 ## Getting Started - Run Project
 
@@ -13,3 +13,8 @@ Tweeter is a simple AJAX-based single-page Application - Twitter clone. This app
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Mobile view before writing a tweet"](https://github.com/adewemimo/tweeter/blob/master/docs/Before%20Tweet%20Mobile%20View.png?raw=true)
+!["Desktop view before writing a tweet"](https://github.com/adewemimo/tweeter/blob/master/docs/Desktop%20View%20Before%20Tweeting.png?raw=true)
