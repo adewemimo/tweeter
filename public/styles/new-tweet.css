@@ -1,14 +1,13 @@
 .new-tweet {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-top: 2rem;
 }
 
-.new-tweet label {
-  display: block;
-  margin-bottom: 10px;
+.new-tweet textarea::placeholder {
   font-weight: bold;
+  color: gray;
 }
 
 .new-tweet textarea {

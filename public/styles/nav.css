@@ -45,3 +45,19 @@
   padding-bottom: 0.5em;
   color: red;
 }
+
+#compose-icon {
+  animation: movement 2s ease infinite;
+}
+
+@keyframes movement {
+  0% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+}

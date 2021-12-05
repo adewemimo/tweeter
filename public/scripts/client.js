@@ -31,11 +31,25 @@ const data = [
 ];
 
 $(document).ready(function () {
+  const tweetFormBox = () => {
+    //toggle the tweet form box with compose button
+    $('#compose-icon').click(function () {
+      if ($('.new-tweet').is(':visible')) {
+        $('.new-tweet').toggle('slow');
+      } else {
+        $('.new-tweet').toggle('slow', function () {
+          $('.new-tweet').css('display', 'flex');
+        });
+      }
+    });
+  };
+  tweetFormBox();
   //submit tweet form and prevent default behavior of submit
   $(function () {
     $('form').submit(function (event) {
       event.preventDefault();
       const tweetLength = $('#tweet-text').val().length;
+      //Slide error message out of view if it is already in view
       $('.tweet-error').slideUp();
       if (tweetLength > 140) {
         $('.tweet-error').text('Your tweet exceeds 140 characters');
@@ -113,7 +127,7 @@ const createTweetElement = tweet => {
 };
 
 const renderTweets = tweets => {
-  tweets.forEach(tweet => {
+  tweets.reverse().forEach(tweet => {
     const $tweet = createTweetElement(tweet);
     $('.container').append($tweet);
   });

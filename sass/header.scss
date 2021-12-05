@@ -20,8 +20,9 @@ $header-bg-color: darkgoldenrod;
   @include verticalAlign($top: 1.25em);
 }
 
-.header-name h2 {
+.header-name p {
   margin: 0;
   padding: 0;
   color: $primary-color;
+  font-size: 2em;
 }

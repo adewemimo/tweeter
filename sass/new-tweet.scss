@@ -6,17 +6,15 @@ $border-color: gray;
 
 .new-tweet {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-top: 2rem;
 }
 
-.new-tweet label {
-  display: block;
-  margin-bottom: 10px;
+.new-tweet textarea::placeholder {
   font-weight: bold;
+  color: $border-color;
 }
-
 .new-tweet textarea {
   width: 100%;
   padding: 0;

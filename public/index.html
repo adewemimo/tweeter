@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <link rel="stylesheet" href="/styles/media.css" type="text/css" />
-  
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
@@ -55,14 +55,14 @@
     <!-- Top nav bar (fixed) -->
     <nav class="nav-container">
       <div class="nav-item-left">
-        <span >tweeter</span>
+        <span>tweeter</span>
       </div>
       <div class="nav-item-right">
         <div class="nav-item-right-one">
           <p><b>Write</b> a new tweet</p>
         </div>
         <div class="nav-item-right-two">
-          <i class="fas fa-angle-double-down"></i>
+          <i class="fas fa-angle-double-down" id="compose-icon"></i>
         </div>
       </div>
     </nav>
@@ -72,7 +72,7 @@
       </div>
       <br />
       <div class="header-name">
-        <h2>Seun Soetan</h2>
+        <p><b>Seun</b> Soetan</p>
       </div>
     </header>
 
@@ -81,11 +81,11 @@
       <section class="new-tweet">
         <div class="tweet-error"></div>
         <form action="/tweets" method="post">
-          <label for="tweet-text">What are you humming about?</label>
           <textarea
             name="text"
             id="tweet-text"
             aria-label="tweet text"
+            placeholder="What are you humming about?"
           ></textarea>
           <div class="submit-tweet">
             <button type="submit">Tweet</button>

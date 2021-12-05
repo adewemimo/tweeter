@@ -1,7 +1,7 @@
 $primary-color: white;
 $secondary-color: #4056a1;
 $title-font: 'Bungee', cursive;
-$tertiary-color:red;
+$tertiary-color: red;
 
 .nav-container {
   display: flex;
@@ -17,17 +17,12 @@ $tertiary-color:red;
   width: 100%;
 }
 
-// .title {
-//   font-family: $title-font
-// }
-
 .nav-item-right {
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: end;
   width: 30%;
-  
 }
 
 .nav-item-left {
@@ -39,22 +34,40 @@ $tertiary-color:red;
   width: 70%;
 
   span {
-    font-family: $title-font
+    font-family: $title-font;
   }
 }
 
 .nav-item-right-one {
   align-self: center;
-  
+
   p {
     margin: 0;
     padding: 0;
   }
-
 }
 
 .nav-item-right-two {
   align-self: center;
   padding-bottom: 0.5em;
   color: $tertiary-color;
+}
+
+// Reference used: https://stackoverflow.com/questions/59135939/how-to-make-an-icon-move-up-and-down-with-css-animation
+#compose-icon {
+  animation: movement 2s ease infinite;
+}
+
+@keyframes movement {
+  0% {
+    transform: translateY(-25%);
+  }
+
+  50% {
+    transform: translateY(25%);
+  }
+
+  100% {
+    transform: translateY(-25%);
+  }
 }

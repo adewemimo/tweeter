@@ -13,8 +13,9 @@
   padding-top: 1.25em;
 }
 
-.header-name h2 {
+.header-name p {
   margin: 0;
   padding: 0;
   color: white;
+  font-size: 2em;
 }
