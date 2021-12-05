@@ -1,7 +1,7 @@
 $primary-color: white;
 $header-bg-color: darkgoldenrod;
 
-@mixin verticalAlign($top: 4em) {
+@mixin verticalAlign($top: 3em) {
   padding-top: $top;
 }
 
