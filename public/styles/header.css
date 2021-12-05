@@ -1,11 +1,11 @@
 .header-container {
+  padding-top: 4em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("../images/basketball.png");
   background-color: darkgoldenrod;
-  padding-top: 4em;
   padding-bottom: 2em;
 }
 

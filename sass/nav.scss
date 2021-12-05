@@ -17,9 +17,9 @@ $tertiary-color:red;
   width: 100%;
 }
 
-.title {
-  font-family: $title-font
-}
+// .title {
+//   font-family: $title-font
+// }
 
 .nav-item-right {
   display: flex;
@@ -27,6 +27,7 @@ $tertiary-color:red;
   justify-content: end;
   align-items: end;
   width: 30%;
+  
 }
 
 .nav-item-left {
@@ -36,15 +37,20 @@ $tertiary-color:red;
   align-items: start;
   padding-bottom: 1em;
   width: 70%;
+
+  span {
+    font-family: $title-font
+  }
 }
 
 .nav-item-right-one {
   align-self: center;
-}
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
 
-.nav-item-right-one p {
-  margin: 0;
-  padding: 0;
 }
 
 .nav-item-right-two {

@@ -1,19 +1,23 @@
 $primary-color: white;
 $header-bg-color: darkgoldenrod;
 
+@mixin verticalAlign($top: 4em) {
+  padding-top: $top;
+}
+
 .header-container {
+  @include verticalAlign;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url('../images/basketball.png');
   background-color: $header-bg-color;
-  padding-top: 4em;
   padding-bottom: 2em;
 }
 
 .header-image {
-  padding-top: 1.25em;
+  @include verticalAlign($top: 1.25em);
 }
 
 .header-name h2 {
